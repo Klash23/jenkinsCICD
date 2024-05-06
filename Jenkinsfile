@@ -1,4 +1,4 @@
-@Library('my-shared-library') _
+@Library('sharedLibs') _
 
 pipeline{
 
@@ -18,8 +18,8 @@ pipeline{
                     when { expression {  params.action == 'create' } }
             steps{
             gitCheckout(
-                branch: "main",
-                url: "https://github.com/vikash-kumar01/mrdevops_java_app.git"
+                branch: "master",
+                url: "https://github.com/Klash23/jenkinsCICD.git"
             )
             }
         }
